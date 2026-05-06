@@ -1,51 +1,44 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+  <!-- Trang chính -->
+  <url>
+    <loc>http://www.onetechhcm.id.vn/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.onetechhcm.id.vn/ve-chung-toi</loc>
+    <priority>0.8</priority>
+  </url>
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  <!-- Chính sách -->
+  <url><loc>http://www.onetechhcm.id.vn/chinh-sach-ban-hang</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/chinh-sach-thanh-toan</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/chinh-sach-van-chuyen</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/chinh-sach-doi-tra</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/chinh-sach-bao-hanh</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/chinh-sach-khieu-nai</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/chinh-sach-bao-mat</loc></url>
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  <!-- Sản phẩm & Giải pháp -->
+  <url><loc>http://www.onetechhcm.id.vn/tong-dai-dien-thoai</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/camera-quan-sat</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/am-thanh-thong-bao</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/bao-dong-bao-chay</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/bao-dong-bao-trom</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/bao-goi-y-ta</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/thiet-bi-mang</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/thiet-bi-luu-tru-nas</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/bo-luu-dien-ups</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/cham-cong-access-control</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/khoa-dien-tu-chuong-cua</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/thiet-bi-van-phong</loc></url>
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  <!-- Dịch vụ & Tin tức -->
+  <url><loc>http://www.onetechhcm.id.vn/san-pham</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/dich-vu</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/giai-phap</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/tin-tuc</loc></url>
+  <url><loc>http://www.onetechhcm.id.vn/lien-he</loc></url>
 
-jobs:
-  # Build job
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+</urlset>
